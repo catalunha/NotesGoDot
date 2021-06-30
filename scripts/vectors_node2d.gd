@@ -36,17 +36,18 @@ func _draw():
 #	vectorFull()
 #	vectorEmpty()
 #	vectorParts()
-#	vectorAdd()
+	vectorAdd()
 #	vectorScalar()
 #	vectorMoviment()
 #	vectorTarget()
 #	vectorReflect()
-	vectorAngle()
+#	vectorAngle()
 	
 # Criando um vetor (x, x) na inicialização.
 func vectorFull():
 	var v1 = Vector2(x, y)
 	print("v1: ",v1)
+	$Label.text = "v1: " + str(v1)
 	draw_vector(v00, v1, Color.blue)
 
 # Criando um vetor (0,0) e associando x e y independentemente.
@@ -55,6 +56,7 @@ func vectorEmpty():
 	v2.x = x
 	v2.y = y
 	print("v2: ",v2)
+	$Label.text = "v2: " + str(v2)
 	draw_vector(v00, v2, Color.green)
 
 func vectorParts():
